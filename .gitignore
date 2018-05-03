@@ -1,0 +1,15 @@
+.idea
+/.idea
+/.idea*
+
+
+!.gitkeep
+.gitignore
+!/.gitignore
+
+*.log
+.DS_Store
+.htaccess
+.well-known
+
+
