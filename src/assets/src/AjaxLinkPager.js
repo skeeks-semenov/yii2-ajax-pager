@@ -8,14 +8,13 @@
 (function (sx, $, _) {
     sx.classes.AjaxLinkPager = sx.classes.Component.extend({
 
-        _init: function () {
-
-        },
+        _init: function () {},
 
         _onDomReady: function () {
             var self = this;
 
             this.jWrapper = $('#' + this.get('id'));
+            this.Ias = this.get('id') + "_ias";
 
             this.jWrapper.pagination(_.extend({
                 'onPageClick': function (pageNumber) {
@@ -23,20 +22,12 @@
                     return false;
                 }
             }, this.get('pagination')));
-            /*
-             this.jWrapper.pagination({
-             'items': 100,
-             'listStyle' : 'paging-list',
-             'itemsOnPage': 10,
-             'currentPage': 2,
-             'prevText': 'prev',
-             'nextText': 'next',
-             'onPageClick': function(pageNumber)
-             {
-             self.locationPage(pageNumber);
-             return false;
-             }
-             });*/
+
+            this.Ias.on('pageChange', function(pageNum, scrollOffset, url) {
+                //sx.YandexMetrika.hit(url);
+                pageNum = pageNum + self.startPage;
+                self.jWrapper.pagination('drawPage', pageNum);
+            });
         },
 
 
