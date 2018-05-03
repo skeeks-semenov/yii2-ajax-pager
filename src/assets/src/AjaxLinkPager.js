@@ -27,7 +27,8 @@
 
             this.Ias.on('pageChange', function(pageNum, scrollOffset, url) {
                 //sx.YandexMetrika.hit(url);
-                pageNum = pageNum + self.startPage;
+                pageNum = pageNum + self.get('currentPage');
+                self.set('currentPage', pageNum);
                 self.jWrapper.pagination('drawPage', pageNum);
             });
         },
