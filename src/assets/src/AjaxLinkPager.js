@@ -23,6 +23,8 @@
                 }
             }, this.get('pagination')));
 
+            console.log(this.Ias);
+
             this.Ias.on('pageChange', function(pageNum, scrollOffset, url) {
                 //sx.YandexMetrika.hit(url);
                 pageNum = pageNum + self.startPage;
