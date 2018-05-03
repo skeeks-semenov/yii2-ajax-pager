@@ -9,6 +9,7 @@
 namespace skeeks\yii2\ajaxpager\assets;
 /**
  * @author Semenov Alexander <semenov@skeeks.com>
+ * @deprecated
  */
 class SimplePaginationAsset extends AssetBundle
 {
