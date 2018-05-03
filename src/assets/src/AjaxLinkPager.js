@@ -29,6 +29,7 @@
                 //sx.YandexMetrika.hit(url);
                 pageNum = pageNum + self.get('currentPage');
                 self.set('currentPage', pageNum);
+                console.log(pageNum);
                 self.jWrapper.pagination('drawPage', pageNum);
             });
         },
