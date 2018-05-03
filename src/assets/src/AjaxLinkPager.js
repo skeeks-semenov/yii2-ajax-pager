@@ -25,6 +25,8 @@
 
             console.log(this.Ias);
 
+            console.log(window[this.Ias]);
+
             this.Ias.on('pageChange', function(pageNum, scrollOffset, url) {
                 //sx.YandexMetrika.hit(url);
                 pageNum = pageNum + self.get('currentPage');
