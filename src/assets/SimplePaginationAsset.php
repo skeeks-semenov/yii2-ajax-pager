@@ -7,6 +7,8 @@
  */
 
 namespace skeeks\yii2\ajaxpager\assets;
+
+use yii\web\AssetBundle;
 /**
  * @author Semenov Alexander <semenov@skeeks.com>
  * @deprecated
