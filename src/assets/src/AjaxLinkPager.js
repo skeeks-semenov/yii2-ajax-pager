@@ -16,18 +16,27 @@
             this.jWrapper = $('#' + this.get('id'));
             this.Ias = this.get('id') + "_ias";
 
-            this.jWrapper.pagination(_.extend({
-                'onPageClick': function (pageNumber) {
-                    self.locationPage(pageNumber);
-                    return false;
-                }
-            }, this.get('pagination')));
+            if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
+                this.jWrapper.pagination(_.extend({
+                    'onPageClick': function (pageNumber) {
+                        self.locationPage(pageNumber);
+                        return false;
+                    }
+                }, this.get('paginationMobile')));
+            } else {
+                this.jWrapper.pagination(_.extend({
+                    'onPageClick': function (pageNumber) {
+                        self.locationPage(pageNumber);
+                        return false;
+                    }
+                }, this.get('pagination')));
+            }
+
 
             this.Ias.on('pageChange', function(pageNum, scrollOffset, url) {
                 //sx.YandexMetrika.hit(url);
                 pageNum = pageNum + self.get('currentPage');
                 self.set('currentPage', pageNum);
-                console.log(pageNum);
                 self.jWrapper.pagination('drawPage', pageNum);
             });
         },

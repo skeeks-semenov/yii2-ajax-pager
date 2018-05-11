@@ -16,6 +16,17 @@ use skeeks\yii2\ajaxpager\assets\AjaxLinkPagerAsset;
  */
 class AjaxLinkPager extends ScrollPager
 {
+
+    /**
+     * @var string
+     * @see jquery.simplePagination.js options
+     */
+    public $spClientOptions = [];
+    /**
+     * @var array
+     */
+    public $spClientMobileOptions = [];
+
     public function run()
     {
         AjaxLinkPagerAsset::register($this->view);
