@@ -6,6 +6,9 @@
  */
 
 (function (sx, $, _) {
+    /**
+     * Ajax постраничная навигация
+     */
     sx.classes.AjaxLinkPager = sx.classes.Component.extend({
 
         _init: function () {},
