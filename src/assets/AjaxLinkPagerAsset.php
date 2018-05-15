@@ -26,6 +26,7 @@ class AjaxLinkPagerAsset extends AssetBundle
 
     public $depends = [
         'yii\web\YiiAsset',
+        'skeeks\sx\assets\Custom',
         'skeeks\yii2\ajaxpager\assets\SimplePaginationAsset',
     ];
 }
