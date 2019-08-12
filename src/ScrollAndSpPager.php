@@ -58,7 +58,7 @@ class ScrollAndSpPager extends ScrollPager
             $paginationOptions = ArrayHelper::merge($paginationOptions, $this->spClientOptions);
         }
 
-        //$paginationMobileOptions = [];
+        $paginationMobileOptions = [];
         if ($this->spClientMobileOptions) {
             $paginationMobileOptions = ArrayHelper::merge($paginationOptions, $this->spClientMobileOptions);
         }

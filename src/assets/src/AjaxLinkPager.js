@@ -17,7 +17,7 @@
             var self = this;
 
             this.jWrapper = $('#' + this.get('id'));
-            this.Ias = this.get('id') + "_ias";
+            this.Ias = $(this.get('id') + "_ias");
 
             if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
                 this.jWrapper.pagination(_.extend({
